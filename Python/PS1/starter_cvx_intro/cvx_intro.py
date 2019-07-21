@@ -156,7 +156,6 @@ def Example_6():
     np.random.seed(1)
 
     C = 1
-
     # rows of X are the feature vectors
     # rows of y are the labels (-1 or +1)
     # find the minimum norm w such that the feature vectors with positive label are separated by
@@ -169,8 +168,8 @@ def Example_6():
     xi = cp.Variable(m)
     b = cp.Variable()
 
-    objective = cp.Minimize(cp.sum_squares(w) / 2)
-    constraints = [cp.multiply((X * w + b) , y) >= 1]
+    objective = cp.Minimize(cp.sum_squares(w) / 2 + C * cp.sum(xi))
+    constraints = [cp.multiply((X * w + b) , y) >= 1 - xi, xi >= 0]
     prob = cp.Problem(objective, constraints)
 
     print("Optimal value", prob.solve())
@@ -222,3 +221,11 @@ if __name__ == "__main__":
     """
 
     Example_6()
+    """
+    Output:
+    Optimal value 4.999289866842231
+    Optimal var
+    w: [ 4.47318986e-13 -1.47228832e-13  4.72408221e-13  2.39124801e-13
+    -2.74240749e-13] 
+    b: 1.6000635061213848
+    """
