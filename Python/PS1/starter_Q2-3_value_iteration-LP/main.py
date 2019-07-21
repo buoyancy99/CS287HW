@@ -1,6 +1,7 @@
 from linear_programming import linear_programming
 from value_iteration import value_iteration
 from make_mdp_for_gridworld import make_mdp_for_gridworld
+from make_mdp_3queues import make_mdp_3queues
 import pickle
 
 p_noise=0.2
