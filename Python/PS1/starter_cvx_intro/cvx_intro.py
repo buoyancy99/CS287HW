@@ -2,7 +2,7 @@
 Author: Pieter Abbeel pabbeel@cs.berkeley.edu www.cs.berkeley.edu/~pabbeel 
 2009/11/07; updated 2015/9/1
 
-Python edition: Boyuan Chen buoyuan99@gmail.com, Harry Xu xuhuazhe12@gmail.com
+Python edition: Boyuan Chen buoyuan99@gmail.com
 latest update 2019/7/21
 
 
